@@ -1,7 +1,7 @@
 FROM centos:6
 
 RUN yum -y update
-RUN yum -y install wget vim unzip git
+RUN yum -y install git
 
 # Install PHP
 RUN yum install -y epel-release
@@ -10,8 +10,6 @@ RUN yum -y install --enablerepo=remi --enablerepo=remi-php56 php php-intl php-mb
 
 # Install Apache
 RUN yum install -y httpd httpd-devel
-# service httpd start
-# chkconfig httpd on
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php
