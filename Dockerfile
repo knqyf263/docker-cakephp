@@ -1,6 +1,6 @@
 FROM centos:6
 
-ENV version 2.7.2
+ENV version 2.7.3
 
 RUN yum -y update
 RUN yum -y install wget php httpd vim unzip
